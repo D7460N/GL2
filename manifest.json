@@ -1,0 +1,60 @@
+{
+  "name": "D7460N Template",
+  "short_name": "D7460N",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0d101b",
+  "theme_color": "rgb(19,20,23)",
+  "orientation": "portrait-primary",
+  "description": "Modern HTML5/CSS3 front-end template",
+  "icons": [
+    {
+      "src": "assets/images/icons/icon-72x72_light-15.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icons/icon-96x96_light-15.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icons/icon-128x128_light-15.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icons/icon-144x144_light-15.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icons/icon-152x152_light-15.png",
+      "type": "image/png",
+      "sizes": "152x152",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icons/icon-192x192_light-15.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icons/icon-384x384_light-15.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/images/icons/icon-512x512_light-15.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable any"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+name: Update JSON with Twitter Data
+on:
+  schedule:
+    - cron: '0 * * * *' # Run every hour
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/setup-node@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm ci
+      - name: Fetch Twitter data and update JSON
+        run: node ./scripts/update-json.js
+        env: 
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET_KEY: ${{ secrets.TWITTER_API_SECRET_KEY }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "dragon@dragontheory.com"
+          git add .
+          git commit -m "Updated JSON with latest Twitter data" || echo "No changes to commit"
+          git push
