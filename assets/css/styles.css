@@ -27,16 +27,13 @@ https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
 
 /*  LAYOUT | Vertical --------------------------------
 */  :root {
-      --app-container-grid-template-rows:
-        auto auto 1fr auto;
-        /* auto auto 1fr minmax(1rem, 7rem) minmax(1rem, 7rem); */
+      --app-container-grid-template-rows: auto auto 1fr auto;
       --nav-justify-content: start;
       --nav-border-radius: .25rem .25rem 0 0;
       --main-margin-block: -1rem 0;
       --main-margin-inline: 0 0;
       --main-border-radius: 0 .3rem .3rem .3rem;
       --tab-grid-auto-flow: column;
-      --sub-header-display: none;
       --grid-gap: 1rem;
       --aside-display: none;
     }
@@ -49,7 +46,6 @@ https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
         --nav-border-radius: .25rem;
         --tab-grid-auto-flow: column;
         --main-border-radius: .3rem;
-        /*  */
       }
     }
 
@@ -57,8 +53,8 @@ https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
 /*  LAYOUT | Horizontal ------------------------------
 */  @media (width >= 600px) {
       :root:has(#toggleLayout:checked) {
-        --app-container-grid-template-columns: 10rem 1fr 15rem;
-        --app-container-grid-template-rows: auto 1fr 1fr auto;
+        --app-container-grid-template-columns: 10rem 1fr;
+        --app-container-grid-template-rows: auto 1fr auto;
         --nav-border-radius: .25rem 0 0 .25rem;
         --nav-justify-content: auto;
         --main-margin-inline: -1rem 0;
@@ -68,8 +64,6 @@ https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
         --aside-resize-v: vertical;
         --tab-grid-auto-flow: row;
         --sub-header-display: grid;
-        --grid-row-span: span 2;
-        --aside-display: grid;
       }
     }
 
@@ -135,8 +129,8 @@ https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
 /*  WRAPPER ----------------------------------
 */  app-container {
       display: grid;
-      grid-template-rows: var(--app-container-grid-template-rows);
       grid-template-columns: var(--app-container-grid-template-columns);
+      grid-template-rows: var(--app-container-grid-template-rows);
       gap: var(--grid-gap);
       padding: 1rem;
       height: 100dvh; 
@@ -161,7 +155,7 @@ https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
   main {
     margin: -1rem 0 0 0 !important;
   }
-  nav header, aside header, aside-2 header {
+  nav header, aside header, header {
     display: none !important;
  }
 } */
@@ -169,7 +163,6 @@ https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
 
 /*  ALL PANELS ----------------------------------
 */  app-container > * {
-      display: grid;
       background-color: rgba(var(--bg-panel-color),
         var(--bg-panel-opacity));
       overflow: hidden;
@@ -181,15 +174,13 @@ https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
 */  nav:has(#radio01:checked) ~ main #tab01,
     nav:has(#radio02:checked) ~ main #tab02,
     nav:has(#radio03:checked) ~ main #tab03,
-    nav:has(#radio04:checked) ~ main #tab04,
-    nav:has(#radio05:checked) ~ main #tab05,
-    nav:has(#radio06:checked) ~ main #tab06{display: grid;}
+    nav:has(#radio04:checked) ~ main #tab04 {display: grid;}
 
     /* rounded corner for MAIN */
     nav:not(:has(#radio01:checked)) ~ main {border-radius: .25rem;}
 
     nav {
-      grid-row: var(--grid-row-span);
+      display: grid;
       user-select: none;
       background-color: transparent;
       justify-content: var(--nav-justify-content);
@@ -217,11 +208,23 @@ demo-buttons {cursor: pointer;}
 
 /*  MAIN ----------------------------------
 */  main {
-      grid-row: var(--grid-row-span);
+      display: grid;
       margin-block: var(--main-margin-block);
       margin-inline: var(--main-margin-inline);
       border-radius: var(--main-border-radius);
       /* resize: var(--main-resize-h); */
+
+      panel-tab[id="tab01"] ul {
+        display: grid;
+        grid-template-columns: 1fr; /* List view layout */
+        gap: 1rem; /*Spacing between list and card items*/
+
+        li {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+          grid-gap: 1em;
+        }
+      }
     }
 
 
@@ -229,15 +232,18 @@ demo-buttons {cursor: pointer;}
 */  aside {
       display: var(--aside-display);
       border-radius: .3rem;
+
+      p {
+        margin: 1rem 0 0 0;
+      }
+
+      img{
+        margin-inline: 1rem;
+        margin-block-start: 1rem;
+        border-radius: .3rem;
+      }
     }
     /* aside {resize: var(--aside-resize-v);} */
-
-
-/*  ASIDE-2 ----------------------------------
-*/  aside-2 {
-      display: var(--aside-display);
-      border-radius: .3rem;
-    }
 
 
 /*  HEADER/FOOTER ----------------------------
@@ -261,7 +267,7 @@ demo-buttons {cursor: pointer;}
       display: var(--sub-header-display);
       padding-left: 1rem;
       letter-spacing: .05rem;
-      color: ;
+      /* color: ; */
     }
 
 
@@ -458,17 +464,14 @@ html:after {
       display: grid;
     }
 
-/* Default message for browsers that do not support :has() */
-.suport::before {
-    content: "Your browser does not support some advanced features (':has()' is not supported).";
-    display: block;
+
+/* Open aside when child panel-list contains anything */
+aside:has(panel-list *) {
+    display: grid;
 }
 
-/* Change the message for browsers that support :has() */
-@supports (selector(:has(*))) {
-    .support::before {
-        content: "Great! Your browser supports advanced features (':has()' is supported).";
-    }
+app-container:has(aside panel-list *) {
+  --app-container-grid-template-columns: 10rem 1fr 15rem;
 }
 
 span-bold {font-weight: 900;}
