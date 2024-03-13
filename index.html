@@ -2,26 +2,26 @@
 <html lang="en-us">
 
   <head>
-    <title>D7460N Template</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="D7460N" />
-    <meta name="description" content="Modern HTML5/CSS3 front-end template" />
-    <meta name="robots" content="index, archive" />
+    <title>GL</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="D7460N">
+    <meta name="description" content="Modern HTML5/CSS3 front-end template">
+    <meta name="robots" content="index, archive">
     <!-- <meta name="color-scheme" content="dark light" /> -->
-    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
-    <link rel="canonical" href="https://d7460n.dev/" />
-    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <link rel="canonical" href="https://d7460n.dev/">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
   </head>
 
   <body style="opacity: 0.0; transition: opacity 1s ease-in-out;">
     <app-container>
       <header>
-        <app-logo>D7460N Template</app-logo>
-        <label for="toggleLayout">
-          <input type="checkbox" id="toggleLayout" checked />
+        <app-logo>GL</app-logo>
+        <label>
+          <input type="checkbox" id="toggleLayout" aria-label="Toggle layout" checked>
           <demo-buttons>Layouts</demo-buttons>
         </label>
         <!-- <label for="oneMenu">
@@ -31,46 +31,42 @@
             <li>Share this news</li>
           </menu>
         </label> -->
-        <label for="toggleTheme">
-          <input type="checkbox" id="toggleTheme" />
-          <demo-buttons>&#9788;</demo-buttons>
+        <label>
+          <input type="checkbox" id="toggleTheme" aria-label="Toggle theme">
+          <demo-buttons>
+            <span>&#9788;</span>
+            <!-- <span>&#x263E;</span> -->
+          </demo-buttons>
         </label>
       </header>
       <nav>
         <h4>Filters</h4>
         <panel-list>
-          <label for="radio01">
-            <input type="radio" id="radio01" name="radio" checked />
-            <list-cell>Curated</list-cell>
+          <label>
+            <input type="radio" id="radio01" name="radio" aria-label="Search" checked>
+            <list-cell>Search</list-cell>
           </label>
-          <label for="radio02">
-            <input type="radio" id="radio02" name="radio" />
-            <list-cell>HTML/CSS</list-cell>
+          <label>
+            <input type="radio" id="radio02" name="radio" aria-label="Sources">
+            <list-cell>Sources</list-cell>
           </label>
-          <label for="radio03">
-            <input type="radio" id="radio03" name="radio" />
-            <list-cell>Web Dev</list-cell>
+          <label>
+            <input type="radio" id="radio03" name="radio" aria-label="FAQ">
+            <list-cell>FAQ</list-cell>
           </label>
-          <label for="radio04">
-            <input type="radio" id="radio04" name="radio" />
-            <list-cell>2A</list-cell>
-          </label>
-          <label for="radio05">
-            <input type="radio" id="radio05" name="radio" />
-            <list-cell>JESUS</list-cell>
-          </label>
-          <label for="radio06">
-            <input type="radio" id="radio06" name="radio" />
-            <list-cell>Politics</list-cell>
+          <label>
+            <input type="radio" id="radio04" name="radio" aria-label="Settings">
+            <list-cell>Settings</list-cell>
           </label>
         </panel-list>
       </nav>
       <main>
         <!-- <h4>Curated Tweets by DragonTheory : :</h4> -->
         <panel-tab id="tab01">
-          <p>Twitter : : <a href="https://twitter.com/dragontheory" target="_new">@dragontheory</a></p>
+          <p>Twitter : : <a href="https://twitter.com/dragontheory" target="_blank">@dragontheory</a></p>
           <panel-list>
             <a class="twitter-timeline loading"
+               aria-label="Twitter-timeline"
                data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
                data-theme="dark"
                href="https://twitter.com/dragontheory?ref_src=twsrc%5Etfw"
@@ -81,6 +77,7 @@
           <p>Modern HTML, CSS, web design/development</p>
           <panel-list>
             <a class="twitter-timeline loading"
+               aria-label="Twitter-timeline"
                data-theme="dark"
                data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
                href="https://twitter.com/dragontheory/lists/web?ref_src=twsrc%5Etfw"></a>
@@ -91,6 +88,7 @@
           <panel-list>
 
           <a class="twitter-timeline loading"
+             aria-label="Twitter-timeline"
              data-theme="dark"
              data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
              href="https://twitter.com/alienlebarge/lists/web-dev?ref_src=twsrc%5Etfw"></a>
@@ -101,55 +99,34 @@
           <p>All things Second Amendment</p>
           <panel-list>
             <a class="twitter-timeline"
+               aria-label="Twitter-timeline"
                data-theme="dark"
                data-chrome="noborders, noscrollbar, transparent, noheader, nofooter" href="https://twitter.com/dragontheory/lists/1668054846845362180?ref_src=twsrc%5Etfw"></a>
           </panel-list>
         </panel-tab>
-        <panel-tab id="tab05">
-          <p>All things JESUS, the Bible, and our origins</p>
-          <panel-list>
-            <a class="twitter-timeline loading"
-               data-theme="dark"
-               data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
-
-             href="https://twitter.com/dragontheory/lists/god?ref_src=twsrc%5Etfw"></a>
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab06">
-          <p>All things politics</p>
-          <panel-list>
-            <a class="twitter-timeline loading" 
-               data-theme="dark" 
-               data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
-               href="https://twitter.com/dragontheory/lists/1443917294070079511?ref_src=twsrc%5Etfw"></a>
-          </panel-list>
-        </panel-tab>
       </main>
       <aside>
-        <h4>Sources</h4>
+        <!-- <h4>Details ::</h4> -->
         <panel-list>
-          <p>Sticky header/scrollable content (no js).</p>
-          <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
-          <p>Adipiscing enim eu turpis egestas pretium aenean. Posuere morbi leo urna molestie at elementum eu facilisis. Aenean et tortor at risus viverra adipiscing at in. Egestas sed tempus urna et pharetra pharetra massa.</p>
-          <p>ASIDE content. In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
-          <p>Adipiscing enim eu turpis egestas pretium aenean. Posuere morbi leo urna molestie at elementum eu facilisis. Aenean et tortor at risus viverra adipiscing at in. Egestas sed tempus urna et pharetra pharetra massa.</p>
+          <img src="/assets/images/screenshots/57d300079bd3a189a0a2d379ceb15c35.jpg" width="200px" alt="Screenshot">
+          <p>ID : :<br><span>20240305123456</span></p>
+          <p>User : :<br><span>username</span></p>
+          <p>Started : :<br><span>2024.03.05 04:04PM UTC</span></p>
+          <p>Stopped : :<br><span>2024.03.05 04:05PM UTC</span></p>
+          <p>Number of searches : : <span>3</span></p>
+          <p>Facets changed : : <span>5</span></p>
+          <p>Results (total) : :<br><span>2024.03.05 04:05PM UTC</span></p>
         </panel-list>
       </aside>
-      <aside-2>
-        <h4>More Details About This List</h4>
-        <panel-list>
-          <div class="support"></div>
-        </panel-list>
-      </aside-2>
       <footer>
         <powered-by>FOOTER</powered-by>
         <app-version>v.0.00001</app-version>
       </footer>
     </app-container>
 
-    <script type="text/javascript" charset="utf-8" src="https://platform.twitter.com/widgets.js" async></script>
-    <script type="text/javascript" charset="utf-8" src="assets/js/scripts.js"></script>
-    <script type="text/javascript" charset="utf-8" src="assets/js/app.js"></script>
+    <script charset="utf-8" src="https://platform.twitter.com/widgets.js" async></script>
+    <script charset="utf-8" src="assets/js/scripts.js"></script>
+    <script charset="utf-8" src="assets/js/app.js"></script>
     <noscript>
       <style>
         body {opacity: 1.0;}
