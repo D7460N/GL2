@@ -1,137 +1,190 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  <head>
-    <title>GL</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="D7460N">
-    <meta name="description" content="Modern HTML5/CSS3 front-end template">
-    <meta name="robots" content="index, archive">
-    <!-- <meta name="color-scheme" content="dark light" /> -->
-    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
-    <link rel="canonical" href="https://d7460n.dev/">
-    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-  </head>
+<head>
+  <title>GL</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="D7460N">
+  <meta name="description" content="Modern HTML5/CSS3 front-end template">
+  <meta name="robots" content="index, archive">
+  <!-- <meta name="color-scheme" content="dark light" /> -->
+  <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+  <link rel="canonical" href="https://d7460n.dev/">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
 
-  <body style="opacity: 0.0; transition: opacity 1s ease-in-out;">
-    <app-container>
-      <header>
-        <app-logo>GL</app-logo>
-        <label>
-          <input type="checkbox" id="toggleLayout" aria-label="Toggle layout" checked>
-          <demo-buttons>Layouts</demo-buttons>
-        </label>
-        <!-- <label for="oneMenu">
+<body style="opacity: 0.0; transition: opacity 1s ease-in-out;">
+  <app-container>
+    <header>
+      <app-logo>GL</app-logo>
+      <label>
+        <input type="checkbox" id="toggleLayout" aria-label="Toggle layout" checked>
+        <demo-buttons>Layouts</demo-buttons>
+      </label>
+      <!-- <label for="oneMenu">
           <demo-buttons>Menu</demo-buttons>
           <menu>
             <li>Save for later</li>
             <li>Share this news</li>
           </menu>
         </label> -->
+      <label>
+        <input type="checkbox" id="toggleTheme" aria-label="Toggle theme">
+        <demo-buttons>
+          <span>&#9788;</span>
+          <!-- <span>&#x263E;</span> -->
+        </demo-buttons>
+      </label>
+    </header>
+    <nav>
+      <h4>Filters</h4>
+      <panel-list>
         <label>
-          <input type="checkbox" id="toggleTheme" aria-label="Toggle theme">
-          <demo-buttons>
-            <span>&#9788;</span>
-            <!-- <span>&#x263E;</span> -->
-          </demo-buttons>
+          <input type="radio" id="radio01" name="radio" aria-label="Search" checked>
+          <list-cell>Search</list-cell>
         </label>
-      </header>
-      <nav>
-        <h4>Filters</h4>
+        <label>
+          <input type="radio" id="radio02" name="radio" aria-label="Sources">
+          <list-cell>Sources</list-cell>
+        </label>
+        <label>
+          <input type="radio" id="radio03" name="radio" aria-label="FAQ">
+          <list-cell>FAQ</list-cell>
+        </label>
+        <label>
+          <input type="radio" id="radio04" name="radio" aria-label="Settings">
+          <list-cell>Settings</list-cell>
+        </label>
+      </panel-list>
+    </nav>
+    <main>
+      <!-- <h4>Curated Tweets by DragonTheory : :</h4> -->
+      <panel-tab id="tab01">
+        <p>Search ::</p>
+        <p>Search input form</p>
+        <ul>
+          <li>
+            <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
+            <search-id>ID</search-id>
+            <start-date>Start Date</start-date>
+            <stop-date>Stop Date</stop-date>
+            <search-number>Inputs</search-number>
+            <facets-changed>Matches</facets-changed>
+            <results-total>Sources</results-total>
+          </li>
+        </ul>
         <panel-list>
-          <label>
-            <input type="radio" id="radio01" name="radio" aria-label="Search" checked>
-            <list-cell>Search</list-cell>
-          </label>
-          <label>
-            <input type="radio" id="radio02" name="radio" aria-label="Sources">
-            <list-cell>Sources</list-cell>
-          </label>
-          <label>
-            <input type="radio" id="radio03" name="radio" aria-label="FAQ">
-            <list-cell>FAQ</list-cell>
-          </label>
-          <label>
-            <input type="radio" id="radio04" name="radio" aria-label="Settings">
-            <list-cell>Settings</list-cell>
-          </label>
+          <ul>
+            <li>
+              <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
+              <search-id>20240305123456</search-id>
+              <start-date>2024.03.14</start-date>
+              <stop-date>2024.03.14</stop-date>
+              <search-number>1</search-number>
+              <facets-changed>10</facets-changed>
+              <results-total>34</results-total>
+            </li>
+            <li>
+              <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
+              <search-id>20240305654321</search-id>
+              <start-date>2024.03.05</start-date>
+              <stop-date>2024.03.05</stop-date>
+              <search-number>1</search-number>
+              <facets-changed>10</facets-changed>
+              <results-total>34</results-total>
+            </li>
+            <li>
+              <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
+              <search-id>20240305123456</search-id>
+              <start-date>2024.03.14</start-date>
+              <stop-date>2024.03.14</stop-date>
+              <search-number>1</search-number>
+              <facets-changed>10</facets-changed>
+              <results-total>34</results-total>
+            </li>
+            <li>
+              <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
+              <search-id>20240305123456</search-id>
+              <start-date>2024.03.14</start-date>
+              <stop-date>2024.03.14</stop-date>
+              <search-number>1</search-number>
+              <facets-changed>10</facets-changed>
+              <results-total>34</results-total>
+            </li>
+            <li>
+              <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
+              <search-id>20240305123456</search-id>
+              <start-date>2024.03.14</start-date>
+              <stop-date>2024.03.14</stop-date>
+              <search-number>1</search-number>
+              <facets-changed>10</facets-changed>
+              <results-total>34</results-total>
+            </li>
+          </ul>
         </panel-list>
-      </nav>
-      <main>
-        <!-- <h4>Curated Tweets by DragonTheory : :</h4> -->
-        <panel-tab id="tab01">
-          <p>Twitter : : <a href="https://twitter.com/dragontheory" target="_blank">@dragontheory</a></p>
-          <panel-list>
-            <a class="twitter-timeline loading"
-               aria-label="Twitter-timeline"
-               data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
-               data-theme="dark"
-               href="https://twitter.com/dragontheory?ref_src=twsrc%5Etfw"
-               data-aria-polite="polite"></a>
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab02">
-          <p>Modern HTML, CSS, web design/development</p>
-          <panel-list>
-            <a class="twitter-timeline loading"
-               aria-label="Twitter-timeline"
-               data-theme="dark"
-               data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
-               href="https://twitter.com/dragontheory/lists/web?ref_src=twsrc%5Etfw"></a>
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab03">
-          <p>All things web design/development</p>
-          <panel-list>
-
-          <a class="twitter-timeline loading"
-             aria-label="Twitter-timeline"
-             data-theme="dark"
-             data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
-             href="https://twitter.com/alienlebarge/lists/web-dev?ref_src=twsrc%5Etfw"></a>
-
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab04">
-          <p>All things Second Amendment</p>
-          <panel-list>
-            <a class="twitter-timeline"
-               aria-label="Twitter-timeline"
-               data-theme="dark"
-               data-chrome="noborders, noscrollbar, transparent, noheader, nofooter" href="https://twitter.com/dragontheory/lists/1668054846845362180?ref_src=twsrc%5Etfw"></a>
-          </panel-list>
-        </panel-tab>
-      </main>
-      <aside>
-        <!-- <h4>Details ::</h4> -->
+      </panel-tab>
+      <panel-tab id="tab02">
+        <p>Modern HTML, CSS, web design/development</p>
         <panel-list>
-          <img src="/assets/images/screenshots/57d300079bd3a189a0a2d379ceb15c35.jpg" width="200px" alt="Screenshot">
-          <p>ID : :<br><span>20240305123456</span></p>
-          <p>User : :<br><span>username</span></p>
-          <p>Started : :<br><span>2024.03.05 04:04PM UTC</span></p>
-          <p>Stopped : :<br><span>2024.03.05 04:05PM UTC</span></p>
-          <p>Number of searches : : <span>3</span></p>
-          <p>Facets changed : : <span>5</span></p>
-          <p>Results (total) : :<br><span>2024.03.05 04:05PM UTC</span></p>
+          <a class="twitter-timeline loading" aria-label="Twitter-timeline" data-theme="dark"
+            data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
+            href="https://twitter.com/dragontheory/lists/web?ref_src=twsrc%5Etfw"></a>
         </panel-list>
-      </aside>
-      <footer>
-        <powered-by>FOOTER</powered-by>
-        <app-version>v.0.00001</app-version>
-      </footer>
-    </app-container>
+      </panel-tab>
+      <panel-tab id="tab03">
+        <p>All things web design/development</p>
+        <panel-list>
 
-    <script charset="utf-8" src="https://platform.twitter.com/widgets.js" async></script>
-    <script charset="utf-8" src="assets/js/scripts.js"></script>
-    <script charset="utf-8" src="assets/js/app.js"></script>
-    <noscript>
-      <style>
-        body {opacity: 1.0;}
-      </style>
-    </noscript>
-  </body>
+          <a class="twitter-timeline loading" aria-label="Twitter-timeline" data-theme="dark"
+            data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
+            href="https://twitter.com/alienlebarge/lists/web-dev?ref_src=twsrc%5Etfw"></a>
+
+        </panel-list>
+      </panel-tab>
+      <panel-tab id="tab04">
+        <p>All things Second Amendment</p>
+        <panel-list>
+          <a class="twitter-timeline" aria-label="Twitter-timeline" data-theme="dark"
+            data-chrome="noborders, noscrollbar, transparent, noheader, nofooter"
+            href="https://twitter.com/dragontheory/lists/1668054846845362180?ref_src=twsrc%5Etfw"></a>
+        </panel-list>
+      </panel-tab>
+    </main>
+    <aside>
+      <!-- <h4>Details ::</h4> -->
+      <panel-list>
+        <ul>
+          <li><img src="/assets/images/screenshots/57d300079bd3a189a0a2d379ceb15c35.jpg" width="200px" alt="Screenshot">
+          </li>
+          <li><span>ID : : </span><search-id>20240305123456</search-id></li>
+          <li><span>User : : </span><user-name>username</user-name></li>
+          <li><span>Started : : </span><start-date>2024.03.05 04:04PM UTC</start-date></li>
+          <li><span>Stopped : : </span><stop-date>2024.03.05 04:05PM UTC</stop-date></li>
+          <li><span># of searches : : </span><span>[ <search-number>3</search-number> ]</span></li>
+          <li><span>Facets changed : : </span><span>[ <facets-changed>5</facets-changed> ]</span></li>
+          <li><span>Results (total) : : </span><span>[ <results-total>346</results-total> ]</span></li>
+        </ul>
+      </panel-list>
+    </aside>
+    <footer>
+      <powered-by>FOOTER</powered-by>
+      <app-version>v.0.00001</app-version>
+    </footer>
+  </app-container>
+
+  <script charset="utf-8" src="https://platform.twitter.com/widgets.js" async></script>
+  <script charset="utf-8" src="assets/js/scripts.js"></script>
+  <script charset="utf-8" src="assets/js/app.js"></script>
+  <noscript>
+    <style>
+      body {
+        opacity: 1.0;
+      }
+    </style>
+  </noscript>
+</body>
 
 </html>
