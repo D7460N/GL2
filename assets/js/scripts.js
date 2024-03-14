@@ -24,3 +24,6 @@ let clearMe = document.querySelector("aside panel-list");
 clearButton.onclick = function() {
   clearMe.innerHTML = "";
 };
+
+
+//Fetch data
