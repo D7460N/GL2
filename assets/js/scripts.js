@@ -66,4 +66,58 @@ if (targetNode) {
 
 
 
-// Ftch data
+// Fetch data on page load
+
+// Assuming data.json is located at the root of your site
+const dataUrl = 'data.json';
+
+// Helper function to load data
+async function loadData(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Could not load JSON:', error);
+  }
+}
+
+// Function to dynamically create HTML for each item
+function createItemHtml(item) {
+  return `
+    <li>
+      <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
+      <search-id>${item['search-id']}</search-id>
+      <start-date>${item['start-date']}</start-date>
+      <stop-date>${item['stop-date']}</stop-date>
+      <search-number>${item['search-number']}</search-number>
+      <facets-changed>${item['facets-changed']}</facets-changed>
+      <results-total>${item['results-total']}</results-total>
+      <p>${item.description}</p>
+    </li>
+  `;
+}
+
+// Function to render items to the DOM
+function renderItems(items) {
+  const container = document.querySelector('main panel-list ul');
+  // Ensure the container exists before attempting to insert HTML
+  if (container) {
+    const html = items.map(createItemHtml).join('');
+    container.innerHTML = html;
+  } else {
+    console.error('Container not found');
+  }
+}
+
+// Load and display the data when the DOM is fully loaded
+domReady(() => {
+  loadData(dataUrl).then(data => {
+    if (data) {
+      renderItems(data);
+    }
+  });
+});
