@@ -258,7 +258,7 @@ main {
       cursor: pointer;
     }
     li:hover {
-      background-color: rgba(var(--bg-accent-color), var(--bg-accent-opacity));
+      background-color: rgba(var(--bg-accent-color), 0.15);
     }
   }
 }
@@ -549,7 +549,7 @@ aside:has(panel-list *) {
 }
 
 app-container:has(aside panel-list *) {
-  --app-container-grid-template-columns: 10rem 1fr 15rem;
+  --app-container-grid-template-columns: 10rem 1fr 16.5rem;
 }
 
 span-bold {
