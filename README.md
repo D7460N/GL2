@@ -6,9 +6,9 @@
 
 <p>Here is a . . .</p>
 
-> data/framework/resolution/platform/browser agnostic,<br />modern,<br />minimal,<br />scalable,<br />accessible,<br />customizable,<br />semantic,<br />standards compliant,<br />responsive,<br />self-aware,<br />modern CSS/HTML/SPA/PWA,<br />micro-frontend
+> data/framework/resolution/platform/browser agnostic,<br />modern,<br />minimal,<br />scalable,<br />accessible,<br />customizable,<br />semantic,<br />standards compliant,<br />responsive,<br />self-aware,<br />modern CSS/HTML/SPA/PWA,<br />micro-frontend<br />GUI template
 
-<p>. . . GUI template to get your project up and running fast.</p>
+<p>. . . to get your project up and running fast.</p>
 
 ---
 
@@ -18,6 +18,7 @@
   <li>Download, extract, and double-click <code>index.html</code>.</li>
   <li>GL2 will load into default browser</li>
   <li>Use your favorite text editor to add static content (API coming soon!)</li>
+  <li>Have fun!</li>
 </ol>
 
 <p>Done.</p>
