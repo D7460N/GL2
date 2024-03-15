@@ -26,4 +26,44 @@ clearButton.onclick = function() {
 };
 
 
-//Fetch data
+// Observe and add data-count to visible LIs.
+function updateListItemCounts() {
+  // Targeting the specific structure: main > #tab01 > panel-list > ul > li
+  const listItems = document.querySelectorAll('main > #tab01 > panel-list > ul > li');
+  let visibleCount = 0;
+
+  listItems.forEach((item) => {
+    if (getComputedStyle(item).display !== 'none') {
+      visibleCount++;
+      item.setAttribute('data-count', visibleCount);
+    }
+  });
+}
+
+const observer = new MutationObserver((mutations) => {
+  // Since mutations could include changes to the list or its items,
+  // call updateListItemCounts to ensure counts are accurate
+  updateListItemCounts();
+});
+
+// Target the parent element that will contain the mutations
+const targetNode = document.querySelector('main > #tab01 > panel-list > ul');
+
+if (targetNode) {
+  // Start observing the target node for configured mutations
+  observer.observe(targetNode, {
+    attributes: true, // Observe attribute changes that could affect visibility
+    childList: true, // Observe when children are added or removed
+    subtree: true, // Observe all descendants
+    attributeFilter: ['style'] // Only monitor style changes for performance
+  });
+
+  // Initial update
+  updateListItemCounts();
+} else {
+  console.error("The specific HTML structure was not found.");
+}
+
+
+
+// Ftch data
