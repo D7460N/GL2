@@ -16,8 +16,8 @@
 
 <ol>
   <li>Download, extract, and double-click <code>index.html</code>.</li>
-  <li>GL2 will load into default browser</li>
-  <li>Use your favorite text editor to add static content (API coming soon!)</li>
+  <li>GL2 will load into your default browser</li>
+  <li>Use your favorite text editor to add static content or integrate into your existing project (API coming soon!)</li>
   <li>Have fun!</li>
 </ol>
 
