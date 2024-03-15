@@ -1,0 +1,20 @@
+{
+    "recommendations": [
+        "jacobcassidy.css-nesting-syntax-highlighting",
+        "waderyan.gitblame",
+        "codezombiech.gitignore",
+        "eamodio.gitlens",
+        "ecmel.vscode-html-css",
+        "solnurkarim.html-to-css-autocompletion",
+        "html-validate.vscode-html-validate",
+        "zainchen.json",
+        "ritwickdey.liveserver",
+        "emilast.logfilehighlighter",
+        "christian-kohler.npm-intellisense",
+        "ibm.output-colorizer",
+        "jock.svg",
+        "pflannery.vscode-versionlens",
+        "ashhitch.vs-code-css-comments",
+        "maxvanderschee.web-accessibility"
+    ]
+}
