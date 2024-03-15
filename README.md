@@ -6,7 +6,7 @@
 
 <p>Here is a . . .</p>
 
-> data/framework/resolution/platform/browser agnostic,<br />modern,<br />minimal,<br />scalable,<br />accessible,<br />customizable,<br />simantic,<br />standards compliant,<br />responsive,<br />self-aware,<br />modern CSS/HTML/SPA/PWA,<br />micro-frontend
+> data/framework/resolution/platform/browser agnostic,<br />modern,<br />minimal,<br />scalable,<br />accessible,<br />customizable,<br />semantic,<br />standards compliant,<br />responsive,<br />self-aware,<br />modern CSS/HTML/SPA/PWA,<br />micro-frontend
 
 <p>. . . GUI template to get your project up and running fast.</p>
 
