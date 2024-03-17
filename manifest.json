@@ -1,12 +1,12 @@
 {
-  "name": "D7460N Template",
-  "short_name": "D7460N",
+  "name": "GL2 Template",
+  "short_name": "GL2",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#0d101b",
   "theme_color": "rgb(19,20,23)",
   "orientation": "portrait-primary",
-  "description": "Modern HTML5/CSS3 front-end template",
+  "description": "Modern HTML5/CSS3 micro-front-end template",
   "icons": [
     {
       "src": "assets/images/icons/icon-72x72_light-15.png",
