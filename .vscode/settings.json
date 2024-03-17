@@ -65,5 +65,13 @@
         "xml",
         "xquery",
         "xsl"
+    ],
+    "cSpell.words": [
+        "noborders",
+        "nofooter",
+        "noheader",
+        "noscrollbar",
+        "Oxanium",
+        "SCROLLBARS"
     ]
 }
