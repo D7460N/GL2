@@ -96,7 +96,6 @@ function createItemHtml(item) {
       <search-number>${item['search-number']}</search-number>
       <facets-changed>${item['facets-changed']}</facets-changed>
       <results-total>${item['results-total']}</results-total>
-      <!-- <p>${item.description}</p> -->
     </li>
   `;
 }
