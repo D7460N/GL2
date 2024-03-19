@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "item-image": "<img src='/assets/images/screenshots/10-steps-cycle-chart-infographics-elements-data-presentation_48248-3932.jpg'>",
     "search-id": "20240305123456",
     "user-name": "First Last Name",
     "start-date": "2024.03.14 04:04PM UTC",
@@ -12,6 +13,7 @@
   },
   { 
   "id": 2,
+  "item-image": "<img src='/assets/images/screenshots/3d-infographic-with-labels_23-2147491548.jpg'>",
   "search-id": "20240305654321",
   "user-name": "First Last Name",
   "start-date": "2024.03.05 09:01AM UTC",
@@ -23,6 +25,7 @@
   },
   { 
   "id": 3,
+  "item-image": "<img src='/assets/images/screenshots/46a166a94651b79f761565292ea109fe.jpg'>",
   "search-id": "20240305410520",
   "user-name": "First Last Name",
   "start-date": "2024.03.01 10:11AM UTC",
@@ -34,6 +37,7 @@
   },
   { 
   "id": 4,
+  "item-image": "<img src='/assets/images/screenshots/57d300079bd3a189a0a2d379ceb15c35.jpg'>",
   "search-id": "202403056302541",
   "user-name": "First Last Name",
   "start-date": "2024.02.18 12:30PM UTC",
@@ -45,6 +49,7 @@
   },
   { 
   "id": 5,
+  "item-image": "<img src='/assets/images/screenshots/arrows-infogaphic-different-colors_23-2147491544.jpg'>",
   "search-id": "20240305126423",
   "user-name": "First Last Name",
   "start-date": "2024.01.29 01:46PM UTC",
