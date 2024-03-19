@@ -8,9 +8,7 @@
 *:after,
 *,
 ::after,
-::before {
-  box-sizing: border-box;
-}
+::before {box-sizing: border-box;}
 body {
   padding: 0;
   margin: 0;
@@ -18,9 +16,7 @@ body {
 body,
 html,
 iframe,
-app-container {
-  background-color: var(--bg-color);
-}
+app-container {background-color: var(--bg-color);}
 /*
 https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
 /* Baseline for default links */
@@ -84,6 +80,7 @@ a:not([class]) {
 /*  THEME | Dark ----------------------------------
 */
 :root {
+  color-scheme: light;
   --bg-color: 19, 20, 23;
   --bg-opacity: 1;
   --bg-02-color: 39, 49, 54;
@@ -113,6 +110,7 @@ a:not([class]) {
 */
 @media (prefers-color-scheme: dark) {
   :root:has(#toggleTheme:checked) {
+    color-scheme: dark;
     --bg-color: 0, 0, 0;
     --bg-opacity: 0.8;
     --bg-02-color: 0, 0, 0;
@@ -187,14 +185,10 @@ app-container > * {
 nav:has(#radio01:checked) ~ main #tab01,
 nav:has(#radio02:checked) ~ main #tab02,
 nav:has(#radio03:checked) ~ main #tab03,
-nav:has(#radio04:checked) ~ main #tab04 {
-  display: grid;
-}
+nav:has(#radio04:checked) ~ main #tab04 {display: grid;}
 
 /* rounded corner for MAIN */
-nav:not(:has(#radio01:checked)) ~ main {
-  border-radius: 0.25rem;
-}
+nav:not(:has(#radio01:checked)) ~ main {border-radius: 0.25rem;}
 
 nav {
   display: grid;
@@ -203,9 +197,7 @@ nav {
   justify-content: var(--nav-justify-content);
 }
 
-nav > panel-list {
-  grid-auto-flow: var(--tab-grid-auto-flow);
-}
+nav > panel-list {grid-auto-flow: var(--tab-grid-auto-flow);}
 
 nav label {
   grid-template-columns: auto 1fr;
@@ -215,18 +207,12 @@ nav label {
 app-logo,
 powered-by,
 app-version,
-demo-buttons {
-  padding: 1rem;
-}
+demo-buttons {padding: 1rem;}
 
-demo-buttons {
-  cursor: pointer;
-}
+demo-buttons {cursor: pointer;}
 
 @media (width <= 600px) {
-  header label:first-of-type demo-buttons {
-    display: none;
-  }
+  header label:first-of-type demo-buttons {display: none;}
 }
 
 /*  MAIN (scoped via nesting) ----------------------------------
@@ -238,9 +224,7 @@ main {
   border-radius: var(--main-border-radius);
   /* resize: var(--main-resize-h); */
 
-  input {
-    display: inline;
-  }
+  input {display: inline;}
 
   panel-tab[id="tab01"] ul {
     display: grid;
@@ -252,14 +236,19 @@ main {
     li {
       display: grid;
       padding: 0.5rem 1rem;
-      grid-template-columns: 2rem minmax(2rem, 1fr) minmax(2rem, 1fr) minmax(2rem, 1fr) minmax(2rem, 1fr) minmax(2rem, 1fr) minmax(2rem, 1fr);
+      grid-template-columns: minmax(1rem, 0.1fr) minmax(8rem, 0.75fr) minmax(11rem, 1fr) minmax(11rem, 1fr) minmax(0.5rem, 0.5fr) minmax(0.5rem, 0.5fr) minmax(0.5rem, 0.25fr);
       grid-gap: 1em;
       transition: background-color 250ms;
-      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      /* max-inline-size: 100%; */
     }
-    li:hover {
-      background-color: rgba(var(--bg-accent-color), 0.15);
-    }
+  }
+
+  panel-tab[id="tab01"] panel-list ul {
+    li {cursor: pointer;}
+    li:hover {background-color: rgba(var(--bg-accent-color), 0.15);}
   }
 }
 
@@ -269,13 +258,12 @@ aside {
   display: var(--aside-display);
   border-radius: 0.3rem;
 
-  p {
-    margin: 1rem 0 0 0;
-  }
+  p {margin: 1rem 0 0 0;}
 
   img {
-    margin-inline: 1rem;
-    margin-block-start: 1rem;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
     border-radius: 0.3rem;
   }
 
@@ -283,9 +271,7 @@ aside {
     padding: 0;
     margin: 0;
 
-    li {
-      padding: 0.5rem 1rem;
-    }
+    li {padding: 0.5rem 1rem;}
   }
 }
 
@@ -303,17 +289,11 @@ footer {
   border-radius: 0.3rem;
 }
 
-header {
-  grid-template-columns: 1fr auto auto;
-}
+header {grid-template-columns: 1fr auto auto;}
 
-header label {
-  grid-template-columns: auto 1fr;
-}
+header label {grid-template-columns: auto 1fr;}
 
-footer {
-  grid-template-columns: 1fr auto;
-}
+footer {grid-template-columns: 1fr auto;}
 
 /*  SUB HEADERS -------------------------------
 */
@@ -401,13 +381,9 @@ panel-list {
   background-size: 100% 36px, 100% 36px, 100% 5px, 100% 5px;
 }
 
-list-cell {
-  padding: 0.5rem 1rem;
-}
+list-cell {padding: 0.5rem 1rem;}
 
-p {
-  padding: 0 1rem;
-}
+p {padding: 0 1rem;}
 
 meta-data {
   font-size: 0.8rem;
@@ -463,7 +439,7 @@ html:after {
   z-index: -10;
   block-size: 100dvh;
   background-color: rgba(var(--bg-02-color), var(--bg-02-opacity));
-  background-image: url("https://d7460n-app-with-resizer.pages.dev/assets/images/logo.svg");
+  /* background-image: url("https://d7460n-app-with-resizer.pages.dev/assets/images/logo.svg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: inherit;
@@ -477,18 +453,10 @@ html:after {
   display: block;
   inline-size: 1rem;
 }
-*::-webkit-scrollbar-button {
-  display: none;
-}
-*::-webkit-scrollbar-track {
-  background-color: rgba(48, 190, 255, 0);
-}
-*::-webkit-scrollbar-track-piece {
-  background-color: rgba(48, 190, 255, 0);
-}
-* {
-  --scrollbar-color: rgba(48, 190, 255, 0);
-}
+*::-webkit-scrollbar-button {display: none;}
+*::-webkit-scrollbar-track {background-color: rgba(48, 190, 255, 0);}
+*::-webkit-scrollbar-track-piece {background-color: rgba(48, 190, 255, 0);}
+* {--scrollbar-color: rgba(48, 190, 255, 0);}
 *:hover,
 *:focus,
 *:focus-within {
@@ -516,19 +484,13 @@ panel-list {
   scrollbar-color: rgba(48, 190, 255, 0) rgba(48, 190, 255, 0); /* Thumb and track color */
   scrollbar-width: thin; /* Track width */
 }
-panel-list:hover {
-  scrollbar-color: rgba(48, 190, 255, 0.3) rgba(48, 190, 255, 0);
-}
+panel-list:hover {scrollbar-color: rgba(48, 190, 255, 0.3) rgba(48, 190, 255, 0);}
 
 /*  MENUS --------------------------------------
 */
-label[for="oneMenu"] {
-  position: relative;
-}
+label[for="oneMenu"] {position: relative;}
 
-label[for="oneMenu"]:hover menu {
-  display: grid;
-}
+label[for="oneMenu"]:hover menu {display: grid;}
 
 menu {
   position: absolute;
@@ -545,22 +507,20 @@ menu li {
   display: grid;
 }
 
-/* Open aside when child panel-list contains anything */
-aside:has(panel-list *) {
-  display: grid;
-}
+/* Open aside when child panel-list contains ANYTHING. A very wide aperture.
+The aperture can be narrowed to whatever we want. Selectors, attributes, 
+number of content characters, IDs, classes, or the absence and or 
+combination of any and or all.
+*/
+aside:has(panel-list *) {display: grid;}
 
 app-container:has(aside panel-list *) {
   --app-container-grid-template-columns: 10rem 1fr 16.5rem;
 }
 
-span-bold {
-  font-weight: 900;
-}
+span-bold {font-weight: 900;}
 
-iframe {
-  background-color: transparent;
-}
+iframe {background-color: transparent;}
 
 panel-list div {
   overflow: auto;
@@ -616,18 +576,10 @@ a:hover {
   animation: spin02 4000ms infinite linear;
 }
 @keyframes spin01 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(720deg);
-  }
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(720deg);}
 }
 @keyframes spin02 {
-  0% {
-    transform: rotate(720deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  0% {transform: rotate(720deg);}
+  100% {transform: rotate(0deg);}
 }
