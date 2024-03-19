@@ -452,7 +452,7 @@ body:before {
   background-repeat: repeat;
   z-index: -5;
 }
-html:after {
+/* html:after {
   content: "";
   position: fixed;
   inset-block-start: 0;
@@ -465,9 +465,8 @@ html:after {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: inherit;
-  /* background-size: cover; */
   background-size: 75% 75%;
-}
+} */
 
 /*  SCROLLBARS ----------------------------------
 */
