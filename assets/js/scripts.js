@@ -69,7 +69,7 @@ if (targetNode) {
 // Fetch data on page load
 
 // Assuming data.json is located at the root of your site
-const dataUrl = 'data.json';
+const dataUrl = 'assets/data/data.json';
 
 // Helper function to load data
 async function loadData(url) {
