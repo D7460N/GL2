@@ -1,0 +1,45 @@
+{
+  "Google APIs and Services": {
+    "Google Analytics": "https://www.google-analytics.com",
+    "Google Tag Manager": "https://www.googletagmanager.com",
+    "Google Maps": "https://maps.googleapis.com",
+    "Google Fonts": [
+      "https://fonts.googleapis.com",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "Social Media Platforms": {
+    "Facebook": "https://connect.facebook.net",
+    "Twitter": "https://platform.twitter.com",
+    "LinkedIn": "https://platform.linkedin.com"
+  },
+  "Content Delivery Networks (CDNs)": {
+    "jQuery CDN": "https://code.jquery.com",
+    "Bootstrap CDN": "https://maxcdn.bootstrapcdn.com",
+    "Cloudflare": [
+      "https://cdnjs.cloudflare.com",
+      "https://cdn.jsdelivr.net"
+    ]
+  },
+  "Video Hosting Platforms": {
+    "YouTube": "https://www.youtube.com",
+    "Vimeo": "https://player.vimeo.com"
+  },
+  "Payment Gateways and E-commerce Platforms": {
+    "PayPal": "https://www.paypal.com",
+    "Stripe": "https://js.stripe.com",
+    "Shopify": "https://cdn.shopify.com"
+  },
+  "Web Fonts and Icon Libraries": {
+    "Font Awesome": "https://use.fontawesome.com",
+    "Adobe Fonts (formerly Typekit)": "https://use.typekit.net"
+  },
+  "Developer Tools and Libraries": {
+    "GitHub": "https://github.com",
+    "Stack Overflow": "https://stackoverflow.com"
+  },
+  "Other Third-Party Services": {
+    "Disqus (comments platform)": "https://*.disqus.com",
+    "AddThis (social sharing widgets)": "https://s7.addthis.com"
+  }
+}
