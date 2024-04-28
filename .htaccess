@@ -1,4 +1,4 @@
 <IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
-    Header always set Permissions-Policy: interest-cohort=()
+  Header set Access-Control-Allow-Origin "*"
+  Header always set Permissions-Policy: interest-cohort=()
 </IfModule>

@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
-  <title>GL2</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Security-Policy" content="csp-policy.json; upgrade-insecure-requests">
-  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="deny">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
-  <meta name="author" content="D7460N">
-  <meta name="description" content="Modern HTML5/CSS3 micro-frontend template">
-  <meta name="robots" content="index, archive">
-  <meta name="color-scheme" content="dark light">
-  <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
-  <link rel="canonical" href="https://D7460N.dev/">
-  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
-  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-</head>
+  <head>
+    <title>GL2</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="csp-policy.json; upgrade-insecure-requests">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="deny">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    <meta name="author" content="D7460N">
+    <meta name="description" content="Modern HTML5/CSS3 micro-frontend template">
+    <meta name="robots" content="index, archive">
+    <meta name="color-scheme" content="dark light">
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <link rel="canonical" href="https://D7460N.dev/">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  </head>
 
-<body style="opacity: 0.0; transition: opacity 1s ease-in-out;">
-  <app-container>
-    <header>
-      <app-logo>GL2</app-logo>
-      <label>
-        <input type="checkbox" id="toggleLayout" aria-label="Toggle layout" checked>
-        <demo-buttons>Layouts</demo-buttons>
-      </label>
-      <!-- <label for="oneMenu">
+  <body style="opacity: 0.0; transition: opacity 1s ease-in-out;">
+    <app-container>
+      <header>
+        <app-logo>GL2</app-logo>
+        <label>
+          <input type="checkbox" id="toggleLayout" aria-label="Toggle layout" checked>
+          <demo-buttons>Layouts</demo-buttons>
+        </label>
+        <!-- <label for="oneMenu">
           <demo-buttons>Menu</demo-buttons>
           <menu>
             <li>Save for later</li>
             <li>Share this news</li>
           </menu>
         </label> -->
-      <label>
-        <input type="checkbox" id="toggleTheme" aria-label="Toggle theme">
-        <demo-buttons>
-          <span>&#9788;</span>
-          <!-- <span>&#x263E;</span> -->
-        </demo-buttons>
-      </label>
-    </header>
-    <nav>
-      <h4>Filters</h4>
-      <panel-list>
         <label>
-          <input type="radio" id="radio01" name="radio" aria-label="Search" checked>
-          <list-cell>Search</list-cell>
+          <input type="checkbox" id="toggleTheme" aria-label="Toggle theme">
+          <demo-buttons>
+            <span>&#9788;</span>
+            <!-- <span>&#x263E;</span> -->
+          </demo-buttons>
         </label>
-        <label>
-          <input type="radio" id="radio02" name="radio" aria-label="Sources">
-          <list-cell>Sources</list-cell>
-        </label>
-        <label>
-          <input type="radio" id="radio03" name="radio" aria-label="FAQ">
-          <list-cell>FAQ</list-cell>
-        </label>
-        <label>
-          <input type="radio" id="radio04" name="radio" aria-label="Settings">
-          <list-cell>Settings</list-cell>
-        </label>
-      </panel-list>
-    </nav>
-    <main>
-      <!-- <h4>Curated Tweets by DragonTheory : :</h4> -->
-      <panel-tab id="tab01">
-        <p>Search : :</p>
-        <p>Search input form</p>
-        <ul>
-          <li>
-            <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
-            <search-id>ID</search-id>
-            <start-date>Start Date</start-date>
-            <stop-date>Stop Date</stop-date>
-            <search-number>Inputs</search-number>
-            <facets-changed>Matches</facets-changed>
-            <results-total>Sources</results-total>
-          </li>
-        </ul>
+      </header>
+      <nav>
+        <h4>Filters</h4>
         <panel-list>
+          <label>
+            <input type="radio" id="radio01" name="radio" aria-label="Search" checked>
+            <list-cell>Search</list-cell>
+          </label>
+          <label>
+            <input type="radio" id="radio02" name="radio" aria-label="Sources">
+            <list-cell>Sources</list-cell>
+          </label>
+          <label>
+            <input type="radio" id="radio03" name="radio" aria-label="FAQ">
+            <list-cell>FAQ</list-cell>
+          </label>
+          <label>
+            <input type="radio" id="radio04" name="radio" aria-label="Settings">
+            <list-cell>Settings</list-cell>
+          </label>
+        </panel-list>
+      </nav>
+      <main>
+        <!-- <h4>Curated Tweets by DragonTheory : :</h4> -->
+        <panel-tab id="tab01">
+          <p>Search : :</p>
+          <p>Search input form</p>
           <ul>
-            <!-- <li>
+            <li>
+              <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
+              <search-id>ID</search-id>
+              <start-date>Start Date</start-date>
+              <stop-date>Stop Date</stop-date>
+              <search-number>Inputs</search-number>
+              <facets-changed>Matches</facets-changed>
+              <results-total>Sources</results-total>
+            </li>
+          </ul>
+          <panel-list>
+            <ul>
+              <!-- <li>
               <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
               <search-id>20240305123456</search-id>
               <start-date>2024.03.14</start-date>
@@ -128,32 +128,32 @@
               <facets-changed>10</facets-changed>
               <results-total>34</results-total>
             </li> -->
-          </ul>
-        </panel-list>
-      </panel-tab>
-      <panel-tab id="tab02">
-        <p>Sources : :</p>
-        <panel-list>
-          <p>content</p>
+            </ul>
           </panel-list>
-      </panel-tab>
-      <panel-tab id="tab03">
-        <p>FAQs : :</p>
+        </panel-tab>
+        <panel-tab id="tab02">
+          <p>Sources : :</p>
+          <panel-list>
+            <p>content</p>
+          </panel-list>
+        </panel-tab>
+        <panel-tab id="tab03">
+          <p>FAQs : :</p>
+          <panel-list>
+            <p>content</p>
+          </panel-list>
+        </panel-tab>
+        <panel-tab id="tab04">
+          <p>Settings : :</p>
+          <panel-list>
+            <p>content</p>
+          </panel-list>
+        </panel-tab>
+      </main>
+      <aside>
+        <!-- <h4>Details ::</h4> -->
         <panel-list>
-          <p>content</p>
-        </panel-list>
-      </panel-tab>
-      <panel-tab id="tab04">
-        <p>Settings : :</p>
-        <panel-list>
-          <p>content</p>
-        </panel-list>
-      </panel-tab>
-    </main>
-    <aside>
-      <!-- <h4>Details ::</h4> -->
-      <panel-list>
-        <!-- <ul>
+          <!-- <ul>
           <li><img src="assets/images/screenshots/57d300079bd3a189a0a2d379ceb15c35.jpg" width="200px" alt="Screenshot"></li>
           <li><span>ID : : </span><search-id>20240305123456</search-id></li>
           <li><span>User : : </span><user-name>username</user-name></li>
@@ -163,22 +163,22 @@
           <li><span>Facets changed : : </span><span>[ <facets-changed>5</facets-changed> ]</span></li>
           <li><span>Results (total) : : </span><span>[ <results-total>346</results-total> ]</span></li>
         </ul>-->
-      </panel-list>
-    </aside>
-    <footer>
-      <powered-by>FOOTER</powered-by>
-      <app-version>v.0.00001</app-version>
-    </footer>
-  </app-container>
-  <script charset="utf-8" src="assets/js/scripts.js"></script>
-  <script charset="utf-8" src="assets/js/app.js"></script>
-  <noscript>
-    <style>
-      body {
-        opacity: 1.0;
-      }
-    </style>
-  </noscript>
-</body>
+        </panel-list>
+      </aside>
+      <footer>
+        <powered-by>FOOTER</powered-by>
+        <app-version>v.0.00001</app-version>
+      </footer>
+    </app-container>
+    <script charset="utf-8" src="assets/js/scripts.js"></script>
+    <script charset="utf-8" src="assets/js/app.js"></script>
+    <noscript>
+      <style>
+        body {
+          opacity: 1.0;
+        }
+      </style>
+    </noscript>
+  </body>
 
 </html>

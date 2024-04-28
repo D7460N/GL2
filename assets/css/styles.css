@@ -256,13 +256,14 @@ main {
 */
 aside {
   display: var(--aside-display);
+  /* grid-row: 1 / -1; */
   border-radius: 0.3rem;
 
   p {margin: 1rem 0 0 0;}
 
   img {
-    width: 100%;
-    height: auto;
+    inline-size: 100%;
+    block-size: auto;
     padding: 1rem;
     border-radius: 0.3rem;
   }

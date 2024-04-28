@@ -1,0 +1,8 @@
+contact_links:
+  - name: Are you looking for documentation on D7460N?
+    url: https://USERNAME.github.io/D7460N
+    about: Please see the documentation for D7460N on its GitHub Pages page.
+  - name: Do want to discuss D7460N with the community?
+    url: https://github.com/USERNAME/D7460N/discussions
+    about: Please see the discussions page for D7460N.
+blank_issues_enabled: true
