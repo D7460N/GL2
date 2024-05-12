@@ -16,10 +16,7 @@
   "Content Delivery Networks (CDNs)": {
     "jQuery CDN": "https://code.jquery.com",
     "Bootstrap CDN": "https://maxcdn.bootstrapcdn.com",
-    "Cloudflare": [
-      "https://cdnjs.cloudflare.com",
-      "https://cdn.jsdelivr.net"
-    ]
+    "Cloudflare": ["https://cdnjs.cloudflare.com", "https://cdn.jsdelivr.net"]
   },
   "Video Hosting Platforms": {
     "YouTube": "https://www.youtube.com",
