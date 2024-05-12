@@ -21,7 +21,7 @@ domReady(() => {
     }
   });
 
-  // Set up the MutationObserver to listen for changes and update list item counts
+  // Set up the MutationObserver to listen for changes and update list item count
   setupMutationObserver();
 
   // Set up global click listener for list items
@@ -78,7 +78,7 @@ function setupGlobalClickListener() {
   });
 }
 
-// Function to fetch and load data from a given URL
+// Fetch data from a given URL
 async function loadData(url) {
   try {
     const response = await fetch(url);
@@ -92,7 +92,7 @@ async function loadData(url) {
   }
 }
 
-// Function to dynamically create HTML for each item
+// HTML for each item
 function createItemHtml(item, index) {
   return `
     <li data-count="${index}">
@@ -107,7 +107,7 @@ function createItemHtml(item, index) {
   `;
 }
 
-// Function to render items to the DOM
+// Render items to the DOM
 function renderItems(items) {
   const container = document.querySelector('main #tab01 panel-list ul');
   if (container) {
@@ -118,7 +118,7 @@ function renderItems(items) {
   }
 }
 
-// Function to update list item counts
+// Update list item counts
 function updateListItemCounts() {
   const listItems = document.querySelectorAll('main > #tab01 > panel-list > ul > li');
   let visibleCount = 0;
@@ -130,7 +130,7 @@ function updateListItemCounts() {
   });
 }
 
-// Function to display item details in the aside section
+// Display item details in the aside section
 function displayItemDetails(itemData, dataIndex, detailsContainer) {
   // If detailsContainer already contains content for this item, clear it. Otherwise, display new content.
   // This logic assumes there's a way to identify that the current content belongs to the clicked item,

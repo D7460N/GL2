@@ -137,5 +137,6 @@
   ],
   "editor.tabSize": 2,
   "html.format.indentInnerHtml": true,
-  "editor.inlineSuggest.suppressSuggestions": true
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "workbench.settings.openDefaultSettings": false
 }
