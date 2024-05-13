@@ -21,15 +21,15 @@ app-container {
 }
 
 /*  LAYOUT | Vertical --------------------------------
-    hint: nav on top
+    nav on top
 */
 :root {
   --app-container-grid-template-rows: auto auto 1fr auto;
   --nav-justify-content: start;
   --nav-border-radius: 0.25rem 0.25rem 0 0;
-  --main-margin-block: -1rem 0;
-  --main-margin-inline: 0 0;
-  --main-border-radius: 0 0.3rem 0.3rem 0.3rem;
+  --article-margin-block: -1rem 0;
+  --article-margin-inline: 0 0;
+  --article-border-radius: 0 0.3rem 0.3rem 0.3rem;
   --tab-grid-auto-flow: column;
   --grid-gap: 1rem;
   --aside-display: none;
@@ -42,23 +42,23 @@ app-container {
     --nav-justify-content: auto;
     --nav-border-radius: 0.25rem;
     --tab-grid-auto-flow: column;
-    --main-border-radius: 0.3rem;
+    --article-border-radius: 0.3rem;
   }
 }
 
 /*  LAYOUT | Horizontal ------------------------------
-    hint: nav on the side
+    nav on the side
 */
 @media (width >=600px) {
-  :root:has(#toggleLayout:checked) {
+  :root:has(#toggleLayout:not(:checked)) {
     --app-container-grid-template-columns: 10rem 1fr;
     --app-container-grid-template-rows: auto 1fr auto;
     --nav-border-radius: 0.25rem 0 0 0.25rem;
     --nav-justify-content: auto;
-    --main-margin-inline: -1rem 0;
-    --main-margin-block: 0 0;
-    --main-resize-h: horizontal;
-    --main-border-radius: 0.3rem;
+    --article-margin-inline: -1rem 0;
+    --article-margin-block: 0 0;
+    --article-resize-h: horizontal;
+    --article-border-radius: 0.3rem;
     --aside-resize-v: vertical;
     --tab-grid-auto-flow: row;
     --sub-header-display: grid;
@@ -127,7 +127,6 @@ app-container {
   display: grid;
   grid-template-columns: var(--app-container-grid-template-columns);
   grid-template-rows: var(--app-container-grid-template-rows);
-  gap: var(--grid-gap);
   padding: 1rem;
   block-size: 100dvh;
   /*
@@ -145,7 +144,7 @@ app-container {
     grid-template-rows: auto auto 1fr minmax(1rem, 7rem) minmax(1rem, 7rem);
     grid-template-columns: unset;
   }
-  nav > panel-list {
+  nav > section {
         grid-auto-flow: column !important;
   }
   main {
@@ -159,7 +158,6 @@ app-container {
 /*  ALL PANELS ----------------------------------
 */
 app-container>* {
-  background-color: rgba(var(--bg-panel-color), var(--bg-panel-opacity));
   overflow: hidden;
   align-content: start;
 }
@@ -185,7 +183,7 @@ nav {
   justify-content: var(--nav-justify-content);
 }
 
-nav>panel-list {
+nav>section {
   grid-auto-flow: var(--tab-grid-auto-flow);
 }
 
@@ -214,53 +212,67 @@ demo-buttons {
 /*  MAIN (scoped nesting) ----------------------------------
 */
 main {
+  grid-template-columns: 1fr;
   display: grid;
-  margin-block: var(--main-margin-block);
-  margin-inline: var(--main-margin-inline);
-  border-radius: var(--main-border-radius);
-  /* resize: var(--main-resize-h); */
+  /* resize: var(--article-resize-h); */
 
   input {
     display: inline;
   }
+}
 
-  panel-tab[id="tab01"] ul {
+main:has(aside) {
+  grid-template-columns: 1fr auto;
+}
+
+
+/*  ARTICLE AKA TABS ----------------------------------
+*/
+article {
+  background-color: rgba(var(--bg-panel-color), var(--bg-panel-opacity));
+  align-content: start;
+  overflow: hidden;
+  display: none;
+  /* margin-block: var(--article-margin-block); */
+  border-radius: var(--article-border-radius);
+}
+
+article[id="tab01"] ul {
+  display: grid;
+  /* List view layout */
+  /* Spacing between list and card items */
+  padding: 0;
+  margin: 0;
+
+  li {
     display: grid;
-    grid-template-columns: 1fr;
-    /* List view layout */
-    gap: 0;
-    /* Spacing between list and card items */
-    padding: 0;
-    margin: 0;
+    padding: 0.5rem 1rem;
+    grid-template-columns: minmax(1rem, 0.1fr) minmax(8rem, 0.75fr) minmax(11rem, 1fr) minmax(11rem, 1fr) minmax(0.5rem, 0.5fr) minmax(0.5rem, 0.5fr) minmax(0.5rem, 0.25fr);
+    grid-gap: 1em;
+    transition: background-color 250ms;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-inline-size: 100%; */
+  }
+}
 
-    li {
-      display: grid;
-      padding: 0.5rem 1rem;
-      grid-template-columns: minmax(1rem, 0.1fr) minmax(8rem, 0.75fr) minmax(11rem, 1fr) minmax(11rem, 1fr) minmax(0.5rem, 0.5fr) minmax(0.5rem, 0.5fr) minmax(0.5rem, 0.25fr);
-      grid-gap: 1em;
-      transition: background-color 250ms;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      /* max-inline-size: 100%; */
-    }
+article[id="tab01"] section ul {
+  li {
+    cursor: pointer;
   }
 
-  panel-tab[id="tab01"] panel-list ul {
-    li {
-      cursor: pointer;
-    }
-
-    li:hover {
-      background-color: rgba(var(--bg-accent-color), 0.15);
-    }
+  li:hover {
+    background-color: rgba(var(--bg-accent-color), 0.15);
   }
 }
 
 /*  ASIDE ----------------------------------
 */
 aside {
+  background-color: rgba(var(--bg-panel-color), var(--bg-panel-opacity));
   display: var(--aside-display);
+  margin-inline-start: 1rem;
   /* grid-row: 1 / -1; */
   border-radius: 0.3rem;
 
@@ -285,6 +297,15 @@ aside {
   }
 }
 
+/* Open <aside> when child section contains ANYTHING (wide aperture).
+Narrow aperture by adding one to many and / or combination of selectors, attributes,
+IDs, classes, or :not() combination of any and or all. */
+aside:has(section *) {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 20rem;
+}
+
 
 /* aside {resize: var(--aside-resize-v);} */
 
@@ -292,6 +313,7 @@ aside {
 */
 header,
 footer {
+  background-color: rgba(var(--bg-panel-color), var(--bg-panel-opacity));
   display: grid;
   grid-auto-flow: column;
   grid-column: 1 / -1;
@@ -301,6 +323,7 @@ footer {
 
 header {
   grid-template-columns: 1fr auto auto;
+  margin-block-end: 1rem;
 
   label {
     grid-template-columns: auto 1fr;
@@ -309,12 +332,7 @@ header {
 
 footer {
   grid-template-columns: 1fr auto;
-}
-
-/* TABS ---------------------------------- */
-panel-tab {
-  overflow: hidden;
-  display: none;
+  margin-block-start: 1rem;
 }
 
 /*  SUB HEADERS -------------------------------
@@ -361,7 +379,8 @@ label:has(> input:checked) {
 } */
 
 /* 4 Children
-:where(label, list-item):has(> :last-child:nth-child(4)) {
+:where(label, list-item):has(>
+:last-child:nth-child(4)) {
   grid-template-columns: auto 1fr auto auto;
 } */
 
@@ -370,7 +389,7 @@ label:has(> input:checked) {
 /* LOW LEVEL ELEMENTS ---------------------------------- */
 
 /* Scrollable */
-panel-list {
+section {
   display: grid;
   overflow: overlay;
   position: relative;
@@ -511,14 +530,14 @@ html:after {
 /* FIREFOX */
 /* Target elements, not :root{} */
 /* https://codeconvey.com/custom-scrollbar-css-for-all-browsers/ */
-panel-list {
+section {
   scrollbar-color: rgba(48, 190, 255, 0) rgba(48, 190, 255, 0);
   /* Thumb and track color */
   scrollbar-width: thin;
   /* Track width */
 }
 
-panel-list:hover {
+section:hover {
   scrollbar-color: rgba(48, 190, 255, 0.3) rgba(48, 190, 255, 0);
 }
 
@@ -547,19 +566,6 @@ menu li {
   display: grid;
 }
 
-/* Open aside when child panel-list contains ANYTHING. A very wide aperture.
-The aperture can be narrowed to whatever we want. Selectors, attributes,
-number of content characters, IDs, classes, or the absence and or
-combination of any and or all.
-*/
-aside:has(panel-list *) {
-  display: grid;
-}
-
-app-container:has(aside panel-list *) {
-  --app-container-grid-template-columns: 10rem 1fr 16.5rem;
-}
-
 span-bold {
   font-weight: 900;
 }
@@ -573,7 +579,7 @@ iframe section article img {
   opacity: 50% !important;
 }
 
-panel-list div {
+section {
   overflow: auto;
 }
 

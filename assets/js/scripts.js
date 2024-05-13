@@ -31,10 +31,10 @@ domReady(() => {
 // Function to attach click event to clear button
 function attachClearButtonEvent() {
   // Element that clears
-  let clearButton = document.querySelector("main #tab01 panel-list ul li");
+  let clearButton = document.querySelector("main #tab01 section ul li");
 
   // Element that is cleared
-  let clearMe = document.querySelector("aside panel-list");
+  let clearMe = document.querySelector("aside section");
 
   // Clear the content of the element when the button is clicked
   if (clearButton && clearMe) {
@@ -50,7 +50,7 @@ function attachClearButtonEvent() {
 function setupMutationObserver() {
   const observer = new MutationObserver(updateListItemCounts);
   // Target the parent element that will contain the mutations
-  const targetNode = document.querySelector('main > #tab01 > panel-list > ul');
+  const targetNode = document.querySelector('main > #tab01 > section > ul');
 
   if (targetNode) {
     observer.observe(targetNode, {
@@ -71,7 +71,7 @@ function setupGlobalClickListener() {
     if (e.target.closest('li[data-count]')) {
       const li = e.target.closest('li[data-count]');
       const dataIndex = parseInt(li.getAttribute('data-count'), 10) - 1; // Adjusting for zero-based index
-      const detailsContainer = document.querySelector('aside panel-list');
+      const detailsContainer = document.querySelector('aside section');
       const currentItemData = globalData[dataIndex];
       displayItemDetails(currentItemData, dataIndex, detailsContainer);
     }
@@ -109,7 +109,7 @@ function createItemHtml(item, index) {
 
 // Render items to the DOM
 function renderItems(items) {
-  const container = document.querySelector('main #tab01 panel-list ul');
+  const container = document.querySelector('main #tab01 section ul');
   if (container) {
     const html = items.map((item, index) => createItemHtml(item, index)).join('');
     container.innerHTML = html;
@@ -120,7 +120,7 @@ function renderItems(items) {
 
 // Update list item counts
 function updateListItemCounts() {
-  const listItems = document.querySelectorAll('main > #tab01 > panel-list > ul > li');
+  const listItems = document.querySelectorAll('main > #tab01 > section > ul > li');
   let visibleCount = 0;
   listItems.forEach((item) => {
     if (getComputedStyle(item).display !== 'none') {

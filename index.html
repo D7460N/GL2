@@ -5,10 +5,11 @@
     <title>GL2</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="csp-policy.json; upgrade-insecure-requests">
+    <!-- <meta http-equiv="Content-Security-Policy" content="csp.json; upgrade-insecure-requests"> -->
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="deny">
+    <!-- <meta http-equiv="X-Frame-Options" content="deny"> -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: mediastream: blob: filesystem: 'unsafe-hashes' 'unsafe-inline' D7460N.dev; object-src 'none'; form-action 'self'; base-uri 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self' https: http: https://fonts.googleapis.com https://fonts.gstatic.com; child-src 'self'; frame-src 'self'; media-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; frame-ancestors 'self'; report-uri 'self' D7460N.dev; report-to 'self' D7460N.dev;"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
     <meta name="author" content="D7460N">
@@ -50,7 +51,7 @@
       </header>
       <nav>
         <h4>Filters</h4>
-        <panel-list>
+        <section>
           <label>
             <input type="radio" id="radio01" name="radio" aria-label="Search" checked>
             <list-cell>Search</list-cell>
@@ -67,11 +68,11 @@
             <input type="radio" id="radio04" name="radio" aria-label="Settings">
             <list-cell>Settings</list-cell>
           </label>
-        </panel-list>
+        </section>
       </nav>
       <main>
         <!-- <h4>Curated Tweets by DragonTheory : :</h4> -->
-        <panel-tab id="tab01">
+        <article id="tab01">
           <p>Search : :</p>
           <p>Search input form</p>
           <ul>
@@ -85,7 +86,7 @@
               <results-total>Sources</results-total>
             </li>
           </ul>
-          <panel-list>
+          <section>
             <ul>
               <!-- <li>
               <bulk-actions><input type="checkbox" aria-label="Select for bulk actions"></bulk-actions>
@@ -133,29 +134,29 @@
               <results-total>34</results-total>
             </li> -->
             </ul>
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab02">
+          </section>
+        </article>
+        <article id="tab02">
           <p>Sources : :</p>
-          <panel-list>
+          <section>
             <p>content</p>
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab03">
+          </section>
+        </article>
+        <article id="tab03">
           <p>FAQs : :</p>
-          <panel-list>
+          <section>
             <p>content</p>
-          </panel-list>
-        </panel-tab>
-        <panel-tab id="tab04">
+          </section>
+        </article>
+        <article id="tab04">
           <p>Settings : :</p>
-          <panel-list>
+          <section>
             <p>content</p>
-          </panel-list>
-        </panel-tab>
+          </section>
+        </article>
         <aside>
           <!-- <h4>Details ::</h4> -->
-          <panel-list>
+          <section>
             <!-- <ul>
             <li><img src="assets/images/screenshots/57d300079bd3a189a0a2d379ceb15c35.jpg" width="200px" alt="Screenshot"></li>
             <li><span>ID : : </span><search-id>20240305123456</search-id></li>
@@ -166,7 +167,7 @@
             <li><span>Facets changed : : </span><span>[ <facets-changed>5</facets-changed> ]</span></li>
             <li><span>Results (total) : : </span><span>[ <results-total>346</results-total> ]</span></li>
           </ul>-->
-          </panel-list>
+          </section>
         </aside>
       </main>
       <footer>
